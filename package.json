@@ -1,0 +1,32 @@
+{
+  "name": "zabbix-cli-ts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/zabbix.js",
+  "types": "dist/zabbix.d.ts",
+  "scripts": {
+    "build": "tsc --declaration",
+    "prettier:check": "npx prettier --check ./src",
+    "lint": "npx eslint .",
+    "lint:all": "npm run prettier:check && npm run lint",
+    "test": "jest --no-cache",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "Flavia Reis Valverde <fareisv@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "prettier": "3.1.1",
+    "typescript": "^5.3.3",
+    "husky": "^8.0.0"
+  },
+  "engines": {
+    "node": "20.x.x"
+  }
+}
