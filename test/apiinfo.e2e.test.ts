@@ -7,6 +7,10 @@ describe('Method apiinfo (e2e)', () => {
     zabbix = new Zabbix()
   })
 
+  afterEach(() => {
+    zabbix.logout()
+  })
+
   it('apiinfo successfully', async () => {
     const version = await zabbix.apiinfo()
     expect(typeof version).toBe('string')

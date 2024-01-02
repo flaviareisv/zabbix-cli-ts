@@ -1,5 +1,8 @@
 import * as dotenv from 'dotenv'
-import zabbixFetch from './zabbix-fetch'
+import zabbixFetch, { ZabbixRequestParams } from './zabbix-fetch'
+import { ZabbixProblem, ZabbixProblemGetParams } from './types/problem'
+import { ZabbixResponse } from './types/zabbix-response'
+import { IZabbix } from './interfaces/Zabbix.interface'
 
 dotenv.config()
 
@@ -7,20 +10,17 @@ const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
 const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
 const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
 
-interface IZabbix {
-  // request(method: string, params: ZabbixRequestParams): Promise<any>
-  apiinfo(): Promise<string>
-}
-
 export default class Zabbix implements IZabbix {
-  private readonly url: string
-  private readonly user: string
-  private readonly password: string
+  private user: string
+  private pass: string
+  apiURL: string
+  authToken: string = ''
 
   constructor(
     url: string = ZABBIX_API_URL,
     user: string = ZABBIX_API_USER,
-    password: string = ZABBIX_API_PASS
+    pass: string = ZABBIX_API_PASS,
+    authToken?: string
   ) {
     if (!url) {
       throw new Error('url parameter not found in constructor')
@@ -28,20 +28,69 @@ export default class Zabbix implements IZabbix {
     if (!user) {
       throw new Error('user parameter not found in constructor')
     }
-    if (!password) {
-      throw new Error('password parameter not found in constructor')
+    if (!pass) {
+      throw new Error('pass parameter not found in constructor')
     }
-    this.url = url
+    this.apiURL = url
     this.user = user
-    this.password = password
+    this.pass = pass
+    if (authToken) {
+      this.authToken = authToken
+    }
+  }
+
+  private async getAuthToken(): Promise<void> {
+    const response = await zabbixFetch(this.apiURL, 'user.login', {
+      username: this.user,
+      password: this.pass
+    })
+    if (!response.ok) {
+      throw new Error(`Login HTTP error! status: ${response.status}`)
+    }
+    const data = await response.json()
+    this.authToken = data.result
+  }
+
+  private async getDataAPI(apiMethod: string, params: ZabbixRequestParams) {
+    if (!this.authToken) {
+      await this.getAuthToken()
+    }
+    return zabbixFetch(this.apiURL, apiMethod, params, this.authToken)
+  }
+
+  async request(
+    apiMethod: string,
+    params: ZabbixRequestParams
+  ): Promise<ZabbixResponse<any>> {
+    const response = await this.getDataAPI(apiMethod, params)
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${response.statusText}`)
+    }
+    const data: ZabbixResponse<any> = await response.json()
+    return data
+  }
+
+  async logout(): Promise<void> {
+    await zabbixFetch(this.apiURL, 'user.logout')
   }
 
   async apiinfo(): Promise<string> {
-    const response = await zabbixFetch(this.url, 'apiinfo.version')
+    const response = await zabbixFetch(this.apiURL, 'apiinfo.version')
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
     const data = await response.json()
     return data.result
+  }
+
+  async problem(
+    params: ZabbixProblemGetParams
+  ): Promise<ZabbixResponse<ZabbixProblem>> {
+    const response = await this.getDataAPI('problem.get', params)
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${response.statusText}`)
+    }
+    const data: ZabbixResponse<ZabbixProblem> = await response.json()
+    return data
   }
 }

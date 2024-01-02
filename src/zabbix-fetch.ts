@@ -1,23 +1,26 @@
-type ZabbixRequestParams = {
+export type ZabbixRequestParams = {
   [propName: string]: any
 }
 
 function zabbixFetch(
   url: string,
   apiMethod: string,
-  params: ZabbixRequestParams = {}
+  params: ZabbixRequestParams = {},
+  authToken?: string
 ): Promise<Response> {
   const data = {
     jsonrpc: '2.0',
     method: apiMethod,
     params: params,
-    id: 1
+    auth: authToken || null,
+    id: Math.floor(Math.random() * 100)
+  }
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json-rpc'
   }
   return fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json-rpc'
-    },
+    headers,
     body: JSON.stringify(data)
   })
 }
