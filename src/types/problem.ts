@@ -41,6 +41,7 @@ type ZabbixProblemTags = {
 }
 
 export type ZabbixProblemGetParams = {
+  output?: ZabbixProblemOutput[] | 'extend'
   eventids?: string | string[]
   groupids?: string | string[]
   hostids?: string | string[]
@@ -64,6 +65,8 @@ export type ZabbixProblemGetParams = {
     | 'extend'
     | 'count'
 } & ZabbixGetParamsCommon
+
+type ZabbixProblemOutput = keyof ZabbixProblem
 
 type ZabbixProblemGetParamsEvaltype = 0 | 2
 

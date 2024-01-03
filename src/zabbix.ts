@@ -3,6 +3,7 @@ import zabbixFetch, { ZabbixRequestParams } from './zabbix-fetch'
 import { ZabbixProblem, ZabbixProblemGetParams } from './types/problem'
 import { ZabbixResponse } from './types/zabbix-response'
 import { IZabbix } from './interfaces/Zabbix.interface'
+import { ZabbixHostGroupGetParams, ZabbixHostGroup } from './types/host-group'
 
 dotenv.config()
 
@@ -91,6 +92,17 @@ export default class Zabbix implements IZabbix {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
     const data: ZabbixResponse<ZabbixProblem> = await response.json()
+    return data
+  }
+
+  async hostGroup(
+    params: ZabbixHostGroupGetParams
+  ): Promise<ZabbixResponse<ZabbixHostGroup>> {
+    const response = await this.getDataAPI('hostgroup.get', params)
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${response.statusText}`)
+    }
+    const data: ZabbixResponse<ZabbixHostGroup> = await response.json()
     return data
   }
 }

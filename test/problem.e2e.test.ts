@@ -11,7 +11,7 @@ describe('Method problem (e2e)', () => {
     zabbix.logout()
   })
 
-  it('checks the return object', async () => {
+  it('checks the return object in problem.get', async () => {
     const items = await zabbix.problem({
       severities: [5, 4, 3, 2, 1, 0],
       limit: 1,
