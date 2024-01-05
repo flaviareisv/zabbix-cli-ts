@@ -1,6 +1,6 @@
 import { ZabbixEventAcknowledges } from './event'
 import { ZabbixGetParamsCommon } from './get-common'
-import { ZabbixSeverity } from './severity'
+import { ZabbixSeverity, ZabbixTag } from './zabbix-common'
 
 export type ZabbixProblem = {
   eventid: string
@@ -35,11 +35,6 @@ type ZabbixProblemURL = {
   url: string
 }
 
-type ZabbixProblemTags = {
-  tag: string
-  value: string
-}
-
 export type ZabbixProblemGetParams = {
   output?: ZabbixProblemOutput[] | 'extend'
   eventids?: string | string[]
@@ -70,7 +65,7 @@ type ZabbixProblemOutput = keyof ZabbixProblem
 
 type ZabbixProblemGetParamsEvaltype = 0 | 2
 
-type ZabbixProblemGetParamsTags = ZabbixProblemTags & {
+type ZabbixProblemGetParamsTags = ZabbixTag & {
   operator: ZabbixProblemGetParamsTagsOperator
 }
 

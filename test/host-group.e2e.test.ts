@@ -17,7 +17,7 @@ describe('Method hostgroup (e2e)', () => {
       output: 'extend'
     })
     expect(items).toEqual({
-      jsonrpc: expect.any(String),
+      jsonrpc: '2.0',
       result: expect.arrayContaining([
         {
           groupid: expect.any(String),

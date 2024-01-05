@@ -1,4 +1,4 @@
-import { ZabbixSeverity } from './severity'
+import { ZabbixSeverity } from './zabbix-common'
 
 export type ZabbixEventAcknowledges = {
   acknowledgeid: string
