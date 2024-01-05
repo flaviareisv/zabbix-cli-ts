@@ -2,8 +2,8 @@
   "name": "zabbix-cli-ts",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/zabbix.js",
-  "types": "dist/zabbix.d.ts",
+  "main": "dist/zabbix-api.js",
+  "types": "dist/zabbix-api.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc --declaration",
@@ -17,9 +17,17 @@
     "test:e2e:watch": "jest --config ./test/jest-e2e.json --watch",
     "prepare": "husky install"
   },
-  "keywords": [],
+  "keywords": [
+    "zabbix",
+    "typescript",
+    "api"
+  ],
   "author": "Flavia Reis Valverde <fareisv@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:flaviareisv/zabbix-cli-ts.git"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.5",
@@ -30,6 +38,7 @@
     "jest": "^29.7.0",
     "prettier": "3.1.1",
     "rimraf": "^5.0.5",
+    "semantic-release": "^22.0.12",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.3.3"
