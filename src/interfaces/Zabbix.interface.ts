@@ -1,6 +1,4 @@
-import { ZabbixHost, ZabbixHostGetParams } from '@/types/host'
-import { ZabbixHostGroup, ZabbixHostGroupGetParams } from '@/types/host-group'
-import { ZabbixProblem, ZabbixProblemGetParams } from '@/types/problem'
+import { ZabbixUserLoginParams } from '@/types/user'
 import { ZabbixResponse } from '@/types/zabbix-response'
 import { ZabbixRequestParams } from '@/zabbix-fetch'
 
@@ -9,13 +7,6 @@ export interface IZabbix {
     method: string,
     params: ZabbixRequestParams
   ): Promise<ZabbixResponse<any>>
+  login(params: ZabbixUserLoginParams): Promise<ZabbixResponse<string>>
   logout(): Promise<void>
-  apiinfo(): Promise<string>
-  problem(
-    params: ZabbixProblemGetParams
-  ): Promise<ZabbixResponse<ZabbixProblem>>
-  hostGroup(
-    params: ZabbixHostGroupGetParams
-  ): Promise<ZabbixResponse<ZabbixHostGroup>>
-  host(params: ZabbixHostGetParams): Promise<ZabbixResponse<ZabbixHost>>
 }

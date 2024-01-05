@@ -1,5 +1,5 @@
 export type ZabbixResponse<T> = {
   jsonrpc: string
-  result: T[]
+  result: T[] | T
   id: number
 }

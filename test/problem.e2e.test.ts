@@ -1,10 +1,10 @@
-import Zabbix from '../src/zabbix'
+import ZabbixAPI from '../src/zabbix-api'
 
-describe('Method problem (e2e)', () => {
-  let zabbix: Zabbix
+describe('Method Problem (e2e)', () => {
+  let zabbix: ZabbixAPI
 
   beforeEach(() => {
-    zabbix = new Zabbix()
+    zabbix = new ZabbixAPI()
   })
 
   afterEach(() => {

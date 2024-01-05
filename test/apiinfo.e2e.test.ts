@@ -1,18 +1,18 @@
-import Zabbix from '../src/zabbix'
+import ZabbixAPI from '../src/zabbix-api'
 
 describe('Method apiinfo (e2e)', () => {
-  let zabbix: Zabbix
+  let zbxAPI: ZabbixAPI
 
   beforeEach(() => {
-    zabbix = new Zabbix()
+    zbxAPI = new ZabbixAPI()
   })
 
   afterEach(() => {
-    zabbix.logout()
+    zbxAPI.logout()
   })
 
   it('apiinfo successfully', async () => {
-    const version = await zabbix.apiinfo()
+    const version = await zbxAPI.apiinfo()
     expect(typeof version).toBe('string')
   })
 })

@@ -1,10 +1,10 @@
-import Zabbix from '../src/zabbix'
+import ZabbixAPI from '../src/zabbix-api'
 
-describe('Method hostgroup (e2e)', () => {
-  let zabbix: Zabbix
+describe('Method Host group (e2e)', () => {
+  let zabbix: ZabbixAPI
 
   beforeEach(() => {
-    zabbix = new Zabbix()
+    zabbix = new ZabbixAPI()
   })
 
   afterEach(() => {
