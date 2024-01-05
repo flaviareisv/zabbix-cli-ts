@@ -3,6 +3,7 @@ import { ZabbixHost, ZabbixHostGetParams } from '@/types/host'
 import { ZabbixHostGroup, ZabbixHostGroupGetParams } from '@/types/host-group'
 import { ZabbixProblem, ZabbixProblemGetParams } from '@/types/problem'
 import { ZabbixTrigger, ZabbixTriggerGetParams } from '@/types/trigger'
+import { ZabbixUser, ZabbixUserGetParams } from '@/types/user'
 import { ZabbixResponse } from '@/types/zabbix-response'
 
 export interface IZabbixAPI {
@@ -18,4 +19,5 @@ export interface IZabbixAPI {
   trigger(
     params: ZabbixTriggerGetParams
   ): Promise<ZabbixResponse<ZabbixTrigger>>
+  user(params: ZabbixUserGetParams): Promise<ZabbixResponse<ZabbixUser>>
 }

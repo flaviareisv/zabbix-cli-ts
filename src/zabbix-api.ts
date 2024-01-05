@@ -4,6 +4,7 @@ import { ZabbixHost, ZabbixHostGetParams } from './types/host'
 import { ZabbixHostGroup, ZabbixHostGroupGetParams } from './types/host-group'
 import { ZabbixProblem, ZabbixProblemGetParams } from './types/problem'
 import { ZabbixTrigger, ZabbixTriggerGetParams } from './types/trigger'
+import { ZabbixUser, ZabbixUserGetParams } from './types/user'
 import { ZabbixResponse } from './types/zabbix-response'
 import Zabbix from './zabbix'
 import zabbixFetch from './zabbix-fetch'
@@ -72,6 +73,15 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
     const data: ZabbixResponse<ZabbixTrigger> = await response.json()
+    return data
+  }
+
+  async user(params: ZabbixUserGetParams): Promise<ZabbixResponse<ZabbixUser>> {
+    const response = await this.getDataAPI('user.get', params)
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${response.statusText}`)
+    }
+    const data: ZabbixResponse<ZabbixUser> = await response.json()
     return data
   }
 }

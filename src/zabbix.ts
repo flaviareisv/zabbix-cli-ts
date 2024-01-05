@@ -11,29 +11,29 @@ const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
 const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
 
 export default class Zabbix implements IZabbix {
-  private readonly user: string
-  private readonly pass: string
+  private readonly username: string
+  private readonly password: string
   protected readonly apiURL: string
   authToken: string = ''
 
   constructor(
     url: string = ZABBIX_API_URL,
-    user: string = ZABBIX_API_USER,
-    pass: string = ZABBIX_API_PASS,
+    username: string = ZABBIX_API_USER,
+    password: string = ZABBIX_API_PASS,
     authToken?: string
   ) {
     if (!url) {
       throw new Error('url parameter not found in constructor')
     }
-    if (!user) {
-      throw new Error('user parameter not found in constructor')
+    if (!username) {
+      throw new Error('username parameter not found in constructor')
     }
-    if (!pass) {
-      throw new Error('pass parameter not found in constructor')
+    if (!password) {
+      throw new Error('password parameter not found in constructor')
     }
     this.apiURL = url
-    this.user = user
-    this.pass = pass
+    this.username = username
+    this.password = password
     if (authToken) {
       this.authToken = authToken
     }
@@ -74,7 +74,10 @@ export default class Zabbix implements IZabbix {
   }
 
   private async getAuthToken(): Promise<void> {
-    const auth = await this.login({ username: this.user, password: this.pass })
+    const auth = await this.login({
+      username: this.username,
+      password: this.password
+    })
     this.authToken = auth.result as string
   }
 }
