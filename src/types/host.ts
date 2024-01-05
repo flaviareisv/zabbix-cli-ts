@@ -90,25 +90,25 @@ export type ZabbixHostGetParams = {
   severities?: ZabbixSeverity | ZabbixSeverity[]
   tags?: ZabbixHostGetTags | ZabbixHostGetTags[]
   inheritedTags?: boolean
-  selectDiscoveries?: ZabbixHostGetSelectDiscoveries | 'extend' | 'count'
-  selectDiscoveryRule?: ZabbixHostGetSelectDiscoveries | 'extend'
-  selectGraphs?: zabbixGraph | 'extend' | 'count'
-  selectHostDiscovery?: ZabbixHostGetSelectDiscovery | 'extend'
-  selectHostGroups?: ZabbixHostGetSelectHostGroup | 'extend'
-  selectHttpTests?: ZabbixHostGetSelectHTTPTest | 'extend' | 'count'
-  selectInterfaces?: ZabbixHostGetSelectInterfaces | 'extend' | 'count'
-  selectInventory?: ZabbixHostGetSelectInventory | 'extend'
-  selectItems?: ZabbixHostGetSelectItems | 'extend' | 'count'
-  selectMacros?: ZabbixHostGetSelectMacros | 'extend'
+  selectDiscoveries?: ZabbixHostGetSelectDiscoveries[] | 'extend' | 'count'
+  selectDiscoveryRule?: ZabbixHostGetSelectDiscoveries[] | 'extend'
+  selectGraphs?: zabbixGraph[] | 'extend' | 'count'
+  selectHostDiscovery?: ZabbixHostGetSelectDiscovery[] | 'extend'
+  selectHostGroups?: ZabbixHostGetSelectHostGroup[] | 'extend'
+  selectHttpTests?: ZabbixHostGetSelectHTTPTest[] | 'extend' | 'count'
+  selectInterfaces?: ZabbixHostGetSelectInterfaces[] | 'extend' | 'count'
+  selectInventory?: ZabbixHostGetSelectInventory[] | 'extend'
+  selectItems?: ZabbixHostGetSelectItems[] | 'extend' | 'count'
+  selectMacros?: ZabbixHostGetSelectMacros[] | 'extend'
   selectParentTemplates?:
-    | ZabbixHostGetSelectParentTemplates
+    | ZabbixHostGetSelectParentTemplates[]
     | 'extend'
     | 'count'
-  selectDashboards?: ZabbixHostGetSelectDashboards | 'extend' | 'count'
+  selectDashboards?: ZabbixHostGetSelectDashboards[] | 'extend' | 'count'
   selectTags?: string[] | 'extend'
   selectInheritedTags?: string[] | 'extend'
-  selectTriggers?: ZabbixHostGetSelectTriggers | 'extend' | 'count'
-  selectValueMaps?: ZabbixHostGetSelectValueMaps | 'extend'
+  selectTriggers?: ZabbixHostGetSelectTriggers[] | 'extend' | 'count'
+  selectValueMaps?: ZabbixHostGetSelectValueMaps[] | 'extend'
   filter?: ZabbixHostGetFilter
   limitSelects?: number
   search?: ZabbixObjStringGeneric[]

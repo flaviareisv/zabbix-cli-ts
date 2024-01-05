@@ -1,3 +1,4 @@
+import { ZabbixEvent, ZabbixEventGetParams } from '@/types/event'
 import { ZabbixHost, ZabbixHostGetParams } from '@/types/host'
 import { ZabbixHostGroup, ZabbixHostGroupGetParams } from '@/types/host-group'
 import { ZabbixProblem, ZabbixProblemGetParams } from '@/types/problem'
@@ -12,4 +13,5 @@ export interface IZabbixAPI {
     params: ZabbixHostGroupGetParams
   ): Promise<ZabbixResponse<ZabbixHostGroup>>
   host(params: ZabbixHostGetParams): Promise<ZabbixResponse<ZabbixHost>>
+  event(params: ZabbixEventGetParams): Promise<ZabbixResponse<ZabbixEvent>>
 }

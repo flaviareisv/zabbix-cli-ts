@@ -1,4 +1,4 @@
-import { ZabbixEventAcknowledges } from './event'
+import { ZabbixEventAcknowledgeAction } from './event'
 import { ZabbixGetParamsCommon } from './get-common'
 import { ZabbixSeverity, ZabbixTag } from './zabbix-common'
 
@@ -71,7 +71,19 @@ type ZabbixProblemGetParamsTags = ZabbixTag & {
 
 type ZabbixProblemGetParamsTagsOperator = 0 | 1 | 2 | 3 | 4 | 5
 
-type ZabbixProblemGetParamsAcknowledges = keyof ZabbixEventAcknowledges
+type ZabbixProblemGetSelectAcknowledges = {
+  acknowledgeid: string
+  userid: string
+  eventid: string
+  clock: number
+  message: string
+  action: ZabbixEventAcknowledgeAction
+  old_severity: ZabbixSeverity
+  new_severity: ZabbixSeverity
+}
+
+type ZabbixProblemGetParamsAcknowledges =
+  keyof ZabbixProblemGetSelectAcknowledges
 
 type ZabbixProblemGetParamsSelectTags = keyof ZabbixProblemGetParamsTags
 
