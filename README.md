@@ -39,14 +39,18 @@ The example below calls the `event.get` method:
 ```js
 import ZabbixAPI from 'zabbix-cli-ts'
 
-const zabbix = new ZabbixAPI()
+async function getEvent() {
+  const zabbix = new ZabbixAPI()
 
-const item = await zabbix.event({
-  limit: 1,
-  output: 'extend'
-})
+  const item = await zabbix.event({
+    limit: 1,
+    output: 'extend'
+  })
 
-zabbix.logout()
+  zabbix.logout()
+}
+
+getEvent()
 ```
 
 The library has a method to call any method from the zabbix api, it just won't be typed with the same call and return parameters:
@@ -54,12 +58,16 @@ The library has a method to call any method from the zabbix api, it just won't b
 ```js
 import ZabbixAPI from 'zabbix-cli-ts'
 
-const zabbix = new ZabbixAPI()
+async function getResquest() {
+  const zabbix = new ZabbixAPI()
 
-const item = await zabbix.request('history.get', {
-  limit: 1,
-  output: 'extend'
-})
+  const item = await zabbix.request('history.get', {
+    limit: 1,
+    output: 'extend'
+  })
 
-zabbix.logout()
+  zabbix.logout()
+}
+
+getRequest()
 ```
