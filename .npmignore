@@ -10,5 +10,5 @@ test
 .prettierignore
 .prettierrc
 .releaserc.json
-jest.config.json
+jest.config.js
 tsconfig.json
