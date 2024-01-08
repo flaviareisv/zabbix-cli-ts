@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:flaviareisv/zabbix-cli-ts.git"
+    "url": "git+ssh://git@github.com/flaviareisv/zabbix-cli-ts.git"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
