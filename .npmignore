@@ -1,3 +1,14 @@
 node_modules
 src
 test
+.github
+.husky
+.vscode
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.prettierignore
+.prettierrc
+.releaserc.json
+jest.config.json
+tsconfig.json
