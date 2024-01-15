@@ -9,15 +9,11 @@ import { ZabbixResponse } from './types/zabbix-response'
 import Zabbix from './zabbix'
 import zabbixFetch from './zabbix-fetch'
 
-const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
-const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
-const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
-
 export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
   constructor(
-    url: string = ZABBIX_API_URL,
-    username: string = ZABBIX_API_USER,
-    password: string = ZABBIX_API_PASS,
+    url: string,
+    username: string,
+    password: string,
     authToken?: string
   ) {
     super(url, username, password, authToken)
