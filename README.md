@@ -12,14 +12,6 @@ Install this lib:
 npm install zabbix-cli-ts
 ```
 
-Set environment in `.env` file or insert credentials on instance class `ZabbixAPI`.
-
-```bash
-ZABBIX_API_URL="http://[DOMAIN]/api_jsonrpc.php"
-ZABBIX_API_USER="..."
-ZABBIX_API_PASS="..."
-```
-
 The available methods are:
 
 - apiinfo.version
@@ -40,7 +32,7 @@ The example below calls the `event.get` method:
 import ZabbixAPI from 'zabbix-cli-ts'
 
 async function getEvent() {
-  const zabbix = new ZabbixAPI()
+  const zabbix = new ZabbixAPI('ZBX_URL', 'ZBX_USER', 'ZBX_PASS')
 
   const item = await zabbix.event({
     limit: 1,
@@ -59,7 +51,7 @@ The library has a method to call any method from the zabbix api, it just won't b
 import ZabbixAPI from 'zabbix-cli-ts'
 
 async function getResquest() {
-  const zabbix = new ZabbixAPI()
+  const zabbix = new ZabbixAPI('ZBX_URL', 'ZBX_USER', 'ZBX_PASS')
 
   const item = await zabbix.request('history.get', {
     limit: 1,
