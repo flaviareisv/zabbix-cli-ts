@@ -1,3 +1,10 @@
+# [1.0.0-rc.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2024-01-15)
+
+
+### Bug Fixes
+
+* adjust params in constructor ([76e788e](https://github.com/flaviareisv/zabbix-cli-ts/commit/76e788e59d3973292d704a4a6bb5bdb213651240))
+
 # 1.0.0-rc.1 (2024-01-15)
 
 
