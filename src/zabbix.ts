@@ -1,10 +1,7 @@
-import * as dotenv from 'dotenv'
 import zabbixFetch, { ZabbixRequestParams } from './zabbix-fetch'
 import { ZabbixResponse } from './types/zabbix-response'
 import { IZabbix } from './interfaces/Zabbix.interface'
 import { ZabbixUserLoginParams } from './types/user'
-
-dotenv.config()
 
 const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
 const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
