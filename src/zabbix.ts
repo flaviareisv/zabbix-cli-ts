@@ -3,10 +3,6 @@ import { ZabbixResponse } from './types/zabbix-response'
 import { IZabbix } from './interfaces/Zabbix.interface'
 import { ZabbixUserLoginParams } from './types/user'
 
-const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
-const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
-const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
-
 export default class Zabbix implements IZabbix {
   private readonly username: string
   private readonly password: string
@@ -14,9 +10,9 @@ export default class Zabbix implements IZabbix {
   authToken: string = ''
 
   constructor(
-    url: string = ZABBIX_API_URL,
-    username: string = ZABBIX_API_USER,
-    password: string = ZABBIX_API_PASS,
+    url: string,
+    username: string,
+    password: string,
     authToken?: string
   ) {
     if (!url) {

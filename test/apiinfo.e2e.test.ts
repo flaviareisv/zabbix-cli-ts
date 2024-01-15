@@ -4,7 +4,11 @@ describe('Method apiinfo (e2e)', () => {
   let zbxAPI: ZabbixAPI
 
   beforeEach(() => {
-    zbxAPI = new ZabbixAPI()
+    const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
+    const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
+    const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
+
+    zbxAPI = new ZabbixAPI(ZABBIX_API_URL, ZABBIX_API_USER, ZABBIX_API_PASS)
   })
 
   afterEach(() => {

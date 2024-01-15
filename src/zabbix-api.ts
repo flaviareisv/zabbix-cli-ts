@@ -10,8 +10,13 @@ import Zabbix from './zabbix'
 import zabbixFetch from './zabbix-fetch'
 
 export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
-  constructor() {
-    super()
+  constructor(
+    url: string,
+    username: string,
+    password: string,
+    authToken?: string
+  ) {
+    super(url, username, password, authToken)
   }
 
   async apiinfo(): Promise<string> {
