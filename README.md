@@ -32,7 +32,7 @@ The example below calls the `event.get` method:
 import ZabbixAPI from 'zabbix-cli-ts'
 
 async function getEvent() {
-  const zabbix = new ZabbixAPI('ZBX_URL', 'ZBX_USER', 'ZBX_PASS')
+  const zabbix = new ZabbixAPI('[ZBX_URL]', '[ZBX_USER]', '[ZBX_PASS]')
 
   const item = await zabbix.event({
     limit: 1,
@@ -51,7 +51,7 @@ The library has a method to call any method from the zabbix api, it just won't b
 import ZabbixAPI from 'zabbix-cli-ts'
 
 async function getResquest() {
-  const zabbix = new ZabbixAPI('ZBX_URL', 'ZBX_USER', 'ZBX_PASS')
+  const zabbix = new ZabbixAPI('[ZBX_URL]', '[ZBX_USER]', '[ZBX_PASS]')
 
   const item = await zabbix.request('history.get', {
     limit: 1,
