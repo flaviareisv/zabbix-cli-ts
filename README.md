@@ -1,8 +1,14 @@
-# Zabbix API Client in TypeScript
+<h1 align="center" style="border-bottom: none;">📦 zabbix-cli-ts</h1>
+<h3 align="center">Zabbix API Client in TypeScript</h3>
+<p align="center">
+  <a href="https://www.npmjs.com/package/zabbix-cli-ts">
+    <img alt="npm latest version" src="https://img.shields.io/npm/v/zabbix-cli-ts/latest.svg">
+  </a>
+</p>
 
 This is a typescript lib to make calls to the zabbix api.
 
-- Validated in version **6.0** of Zabbix API
+> Validated in version **6.0** of Zabbix API
 
 ## Getting started
 
