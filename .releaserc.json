@@ -15,7 +15,7 @@
     }
   ],
   "branches": [
-    "main",
+    { "name": "main", "channel": "latest", "prerelease": false },
     { "name": "rc", "channel": "pre/rc", "prerelease": "rc" },
     { "name": "beta", "channel": "beta", "prerelease": true }
   ]
