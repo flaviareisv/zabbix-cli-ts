@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.2...v1.0.3) (2024-01-17)
+
+
+### Bug Fixes
+
+* adjust readme and version for npm ([5d8f283](https://github.com/flaviareisv/zabbix-cli-ts/commit/5d8f283c786e5953b787331936d803f3d675ada3))
+
 ## [1.0.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.1...v1.0.2) (2024-01-17)
 
 
