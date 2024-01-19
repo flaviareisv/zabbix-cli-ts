@@ -4,6 +4,20 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/esm.d.mts",
+        "default": "./dist/esm.mjs"
+      },
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc --declaration && tsc-alias",
