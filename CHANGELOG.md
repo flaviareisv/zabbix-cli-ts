@@ -1,3 +1,10 @@
+## [1.0.5-rc.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5-rc.1...v1.0.5-rc.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* adjust modules ([98580cc](https://github.com/flaviareisv/zabbix-cli-ts/commit/98580cc5108641014b585e535c2a53b3d77d1e6c))
+
 ## [1.0.5-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.4...v1.0.5-rc.1) (2024-01-19)
 
 
