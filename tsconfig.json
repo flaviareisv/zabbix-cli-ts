@@ -6,10 +6,10 @@
     "declaration": true,
     "esModuleInterop": true,
     "inlineSourceMap": false,
-    "lib": [
-      "es2022"
-    ],
-    "module": "es2022",
+    // "lib": [
+    //   "es2022"
+    // ],
+    "module": "commonjs",
     "target": "es2022",
     "outDir": "dist",
     "listEmittedFiles": false,
