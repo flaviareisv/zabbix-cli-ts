@@ -1,3 +1,10 @@
+## [1.0.5-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.4...v1.0.5-rc.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* adjust exports for lib ([50018c6](https://github.com/flaviareisv/zabbix-cli-ts/commit/50018c661d3ced2109a0bffc78812acb63b69735))
+
 ## [1.0.4](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.3...v1.0.4) (2024-01-19)
 
 
