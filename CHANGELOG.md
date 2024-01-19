@@ -1,3 +1,10 @@
+## [1.0.4-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.3...v1.0.4-rc.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* export class in module ([ce62b5c](https://github.com/flaviareisv/zabbix-cli-ts/commit/ce62b5ce6dca7865246cc122db7210e1e9138917))
+
 ## [1.0.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.2...v1.0.3) (2024-01-17)
 
 

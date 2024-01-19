@@ -1,6 +1,6 @@
 {
   "name": "zabbix-cli-ts",
-  "version": "1.0.3",
+  "version": "1.0.4-rc.1",
   "description": "",
   "main": "index.js",
   "types": "dist/zabbix-api.d.ts",
