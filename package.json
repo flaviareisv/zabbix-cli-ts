@@ -8,15 +8,14 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "default": "./dist/index.js"
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
     }
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --declaration && tsc-alias",
+    "build": "tsc && tsc-alias",
     "prettier:check": "npx prettier --check ./src",
     "lint": "npx eslint .",
     "lint:all": "npm run prettier:check && npm run lint",

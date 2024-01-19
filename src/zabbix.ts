@@ -40,7 +40,8 @@ export default class Zabbix implements IZabbix {
     if (!response.ok) {
       throw new Error(`Login HTTP error! status: ${response.status}`)
     }
-    return response.json()
+    const res = (await response.json()) as ZabbixResponse<string>
+    return res
   }
 
   async logout(): Promise<void> {
@@ -55,7 +56,8 @@ export default class Zabbix implements IZabbix {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<any> = await response.json()
+    const data: ZabbixResponse<any> =
+      (await response.json()) as ZabbixResponse<any>
     return data
   }
 

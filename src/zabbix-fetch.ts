@@ -15,12 +15,11 @@ function zabbixFetch(
     auth: authToken || null,
     id: Math.floor(Math.random() * 100)
   }
-  const headers: HeadersInit = {
-    'Content-Type': 'application/json-rpc'
-  }
   return fetch(url, {
     method: 'POST',
-    headers,
+    headers: {
+      'Content-Type': 'application/json-rpc'
+    },
     body: JSON.stringify(data)
   })
 }
