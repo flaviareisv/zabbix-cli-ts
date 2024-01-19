@@ -7,13 +7,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "require": {
+      "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
-      },
-      "import": {
-        "types": "./dist/esm.d.mts",
-        "default": "./dist/esm.mjs"
       },
       "default": "./dist/index.js"
     }
