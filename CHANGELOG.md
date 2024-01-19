@@ -1,3 +1,10 @@
+## [1.0.5-rc.4](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5-rc.3...v1.0.5-rc.4) (2024-01-19)
+
+
+### Bug Fixes
+
+* refactory api and compilation ([03a53ff](https://github.com/flaviareisv/zabbix-cli-ts/commit/03a53ff3f244cc788a72267c8fe16cd7510d2691))
+
 ## [1.0.5-rc.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5-rc.2...v1.0.5-rc.3) (2024-01-19)
 
 
