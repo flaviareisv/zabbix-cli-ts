@@ -1,4 +1,4 @@
-import ZabbixAPI from '../src/zabbix-api'
+import ZabbixAPI from '../src/index'
 
 jest.setTimeout(50000)
 

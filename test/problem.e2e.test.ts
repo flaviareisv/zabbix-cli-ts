@@ -1,4 +1,4 @@
-import ZabbixAPI from '../src/zabbix-api'
+import ZabbixAPI from '../src/index'
 
 describe('Method Problem (e2e)', () => {
   let zabbix: ZabbixAPI

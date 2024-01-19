@@ -1,4 +1,4 @@
-import ZabbixAPI from '../src/zabbix-api'
+import ZabbixAPI from '../src/index'
 
 describe('Method Trigger (e2e)', () => {
   let zabbix: ZabbixAPI

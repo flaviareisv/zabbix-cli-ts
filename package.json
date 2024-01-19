@@ -2,8 +2,8 @@
   "name": "zabbix-cli-ts",
   "version": "1.0.4",
   "description": "",
-  "main": "index.js",
-  "types": "dist/zabbix-api.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc --declaration && tsc-alias",

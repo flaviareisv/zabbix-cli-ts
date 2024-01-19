@@ -9,7 +9,7 @@ import { ZabbixResponse } from './types/zabbix-response'
 import Zabbix from './zabbix'
 import zabbixFetch from './zabbix-fetch'
 
-export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
+export class ZabbixAPI extends Zabbix implements IZabbixAPI {
   constructor(
     url: string,
     username: string,
