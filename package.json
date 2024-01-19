@@ -2,7 +2,7 @@
   "name": "zabbix-cli-ts",
   "version": "1.0.3",
   "description": "",
-  "main": "dist/zabbix-api.js",
+  "main": "index.js",
   "types": "dist/zabbix-api.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
