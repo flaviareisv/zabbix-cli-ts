@@ -1,18 +1,18 @@
 {
   "name": "zabbix-cli-ts",
   "version": "1.0.5-rc.5",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
+  "description": "This is a typescript lib to make calls to the zabbix api",
+  "main": "dist/cjs/index.js",
+  "module": "./dist/esm5/index.js",
+  "es2015": "./dist/esm2015/index.js",
+  "typings": "./dist/typings/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc && tsc-alias",
+    "build": "npm run build:cjs && npm run build:es5 && npm run build:es2015 && npm run build:types",
+    "build:cjs": "tsc && tsc-alias",
+    "build:es5": "tsc -p tsconfig.esm5.json && tsc-alias -p tsconfig.esm5.json",
+    "build:es2015": "tsc -p tsconfig.esm2015.json && tsc-alias -p tsconfig.esm2015.json",
+    "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "prettier:check": "npx prettier --check ./src",
     "lint": "npx eslint .",
     "lint:all": "npm run prettier:check && npm run lint",
