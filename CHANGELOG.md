@@ -1,3 +1,10 @@
+# [1.1.0-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5...v1.1.0-rc.1) (2024-01-23)
+
+
+### Features
+
+* add request timeout ([ecfe334](https://github.com/flaviareisv/zabbix-cli-ts/commit/ecfe334c26dd6600a6c2ba7fe59aa067c6a6968c))
+
 ## [1.0.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.4...v1.0.5) (2024-01-23)
 
 
