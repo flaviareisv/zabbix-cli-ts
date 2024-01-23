@@ -109,7 +109,7 @@ export type ZabbixHostGetParams = {
   selectInheritedTags?: string[] | 'extend'
   selectTriggers?: ZabbixHostGetSelectTriggers[] | 'extend' | 'count'
   selectValueMaps?: ZabbixHostGetSelectValueMaps[] | 'extend'
-  filter?: ZabbixHostGetFilter
+  filter?: Partial<ZabbixHostGetFilter>
   limitSelects?: number
   search?: ZabbixObjStringGeneric[]
   searchInventory?: ZabbixObjStringGeneric[]
