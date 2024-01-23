@@ -1,3 +1,10 @@
+# [1.1.0-rc.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* adjust import types ([108ab36](https://github.com/flaviareisv/zabbix-cli-ts/commit/108ab364c142d748c9e2a4c7df505517ec838150))
+
 # [1.1.0-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5...v1.1.0-rc.1) (2024-01-23)
 
 
