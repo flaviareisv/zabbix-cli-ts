@@ -1,3 +1,10 @@
+# [1.1.0-rc.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2024-01-23)
+
+
+### Bug Fixes
+
+* remove unusabled ([3f86b21](https://github.com/flaviareisv/zabbix-cli-ts/commit/3f86b217efb6b7534933fa4ede86e2d924105e35))
+
 # [1.1.0-rc.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2024-01-23)
 
 
