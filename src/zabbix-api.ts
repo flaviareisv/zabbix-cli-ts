@@ -7,16 +7,16 @@ import { ZabbixTrigger, ZabbixTriggerGetParams } from './types/trigger'
 import { ZabbixUser, ZabbixUserGetParams } from './types/user'
 import { ZabbixResponse } from './types/zabbix-response'
 import Zabbix from './zabbix'
-import zabbixFetch from './zabbix-fetch'
+import zabbixFetch, { ZabbixRequestOptions } from './zabbix-fetch'
 
 export class ZabbixAPI extends Zabbix implements IZabbixAPI {
   constructor(
     url: string,
     username: string,
     password: string,
-    authToken?: string
+    options?: ZabbixRequestOptions
   ) {
-    super(url, username, password, authToken)
+    super(url, username, password, options)
   }
 
   async apiinfo(): Promise<string> {

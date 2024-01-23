@@ -3,13 +3,13 @@ import ZabbixAPI from '../src/index'
 jest.setTimeout(50000)
 
 describe('Method Event (e2e)', () => {
+  const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
+  const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
+  const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
+
   let zabbix: ZabbixAPI
 
   beforeEach(() => {
-    const ZABBIX_API_URL = process.env.ZABBIX_API_URL || ''
-    const ZABBIX_API_USER = process.env.ZABBIX_API_USER || ''
-    const ZABBIX_API_PASS = process.env.ZABBIX_API_PASS || ''
-
     zabbix = new ZabbixAPI(ZABBIX_API_URL, ZABBIX_API_USER, ZABBIX_API_PASS)
   })
 

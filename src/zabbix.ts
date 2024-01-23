@@ -1,4 +1,7 @@
-import zabbixFetch, { ZabbixRequestParams } from './zabbix-fetch'
+import zabbixFetch, {
+  ZabbixRequestOptions,
+  ZabbixRequestParams
+} from './zabbix-fetch'
 import { ZabbixResponse } from './types/zabbix-response'
 import { IZabbix } from './interfaces/Zabbix.interface'
 import { ZabbixUserLoginParams } from './types/user'
@@ -7,13 +10,14 @@ export default class Zabbix implements IZabbix {
   private readonly username: string
   private readonly password: string
   protected readonly apiURL: string
+  readonly options: ZabbixRequestOptions
   authToken: string = ''
 
   constructor(
     url: string,
     username: string,
     password: string,
-    authToken?: string
+    options?: ZabbixRequestOptions
   ) {
     if (!url) {
       throw new Error('url parameter not found in constructor')
@@ -27,6 +31,8 @@ export default class Zabbix implements IZabbix {
     this.apiURL = url
     this.username = username
     this.password = password
+    this.options = options || {}
+    const { authToken } = options || {}
     if (authToken) {
       this.authToken = authToken
     }
@@ -65,7 +71,10 @@ export default class Zabbix implements IZabbix {
     if (!this.authToken) {
       await this.getAuthToken()
     }
-    return zabbixFetch(this.apiURL, apiMethod, params, this.authToken)
+    return zabbixFetch(this.apiURL, apiMethod, params, {
+      ...this.options,
+      authToken: this.authToken
+    })
   }
 
   private async getAuthToken(): Promise<void> {
