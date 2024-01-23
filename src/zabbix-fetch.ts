@@ -22,7 +22,6 @@ function zabbixFetch(
     id: Math.floor(Math.random() * 100)
   }
   const signal = timeout ? AbortSignal.timeout(timeout) : undefined
-  console.log('TIMEOUT', timeout, signal)
   return fetch(url, {
     method: 'POST',
     headers: {
