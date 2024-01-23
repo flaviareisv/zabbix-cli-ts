@@ -1,8 +1,26 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es2016",
     "module": "commonjs",
-    "outDir": "./dist/cjs"
-  }
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true
+  },
+  "include": [
+    "./src/"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./src/interfaces",
+    "./src/types"
+  ]
 }
