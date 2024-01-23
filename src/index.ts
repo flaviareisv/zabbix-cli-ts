@@ -36,3 +36,4 @@ export {
   ZabbixResponse
 } from './types'
 export { IZabbix, IZabbixAPI } from './interfaces'
+export { ZabbixRequestOptions } from './zabbix-fetch'
