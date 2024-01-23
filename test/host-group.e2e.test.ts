@@ -1,4 +1,4 @@
-import ZabbixAPI from '../src/zabbix-api'
+import ZabbixAPI from '../src/index'
 
 describe('Method Host group (e2e)', () => {
   let zabbix: ZabbixAPI

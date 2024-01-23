@@ -1,12 +1,12 @@
 {
   "name": "zabbix-cli-ts",
-  "version": "1.0.4",
-  "description": "",
-  "main": "index.js",
-  "types": "dist/zabbix-api.d.ts",
+  "version": "1.0.5-rc.7",
+  "description": "This is a typescript lib to make calls to the zabbix api",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --declaration && tsc-alias",
+    "build": "tsc && tsc-alias",
     "prettier:check": "npx prettier --check ./src",
     "lint": "npx eslint .",
     "lint:all": "npm run prettier:check && npm run lint",

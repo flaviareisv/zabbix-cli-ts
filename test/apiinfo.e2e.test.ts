@@ -1,4 +1,4 @@
-import ZabbixAPI from '../src/zabbix-api'
+import ZabbixAPI from '../src/index'
 
 describe('Method apiinfo (e2e)', () => {
   let zbxAPI: ZabbixAPI

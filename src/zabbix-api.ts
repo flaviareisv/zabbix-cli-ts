@@ -9,7 +9,7 @@ import { ZabbixResponse } from './types/zabbix-response'
 import Zabbix from './zabbix'
 import zabbixFetch from './zabbix-fetch'
 
-export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
+export class ZabbixAPI extends Zabbix implements IZabbixAPI {
   constructor(
     url: string,
     username: string,
@@ -24,8 +24,8 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
-    const data = await response.json()
-    return data.result
+    const data = (await response.json()) as ZabbixResponse<string>
+    return data.result as string
   }
 
   async problem(
@@ -35,7 +35,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixProblem> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixProblem>
     return data
   }
 
@@ -46,7 +46,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixHostGroup> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixHostGroup>
     return data
   }
 
@@ -55,7 +55,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixHost> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixHost>
     return data
   }
 
@@ -66,7 +66,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixEvent> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixEvent>
     return data
   }
 
@@ -77,7 +77,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixTrigger> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixTrigger>
     return data
   }
 
@@ -86,7 +86,7 @@ export default class ZabbixAPI extends Zabbix implements IZabbixAPI {
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`)
     }
-    const data: ZabbixResponse<ZabbixUser> = await response.json()
+    const data = (await response.json()) as ZabbixResponse<ZabbixUser>
     return data
   }
 }
