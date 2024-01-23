@@ -1,3 +1,10 @@
+# [1.1.0-rc.4](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.3...v1.1.0-rc.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* adjust type for host ([2929390](https://github.com/flaviareisv/zabbix-cli-ts/commit/2929390aa29f71d6782741cb734e98171434e2a3))
+
 # [1.1.0-rc.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2024-01-23)
 
 
