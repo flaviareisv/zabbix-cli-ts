@@ -1,6 +1,6 @@
 {
   "name": "zabbix-cli-ts",
-  "version": "1.0.5-rc.7",
+  "version": "1.0.5",
   "description": "This is a typescript lib to make calls to the zabbix api",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",

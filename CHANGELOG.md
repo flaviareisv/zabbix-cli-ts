@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.4...v1.0.5) (2024-01-23)
+
+
+### Bug Fixes
+
+* adjust build module ([9beaa4a](https://github.com/flaviareisv/zabbix-cli-ts/commit/9beaa4a111a4a45b31e21b8e8f6790d15bfbad2a))
+* adjust exports for lib ([50018c6](https://github.com/flaviareisv/zabbix-cli-ts/commit/50018c661d3ced2109a0bffc78812acb63b69735))
+* adjust modules ([0c2868f](https://github.com/flaviareisv/zabbix-cli-ts/commit/0c2868fc02e6a4dcbe243c7ff68aa440f0ff366e))
+* adjust modules ([100a61d](https://github.com/flaviareisv/zabbix-cli-ts/commit/100a61deb4a1cfbfdba99ec0b707a514d9d86fdf))
+* adjust modules ([57aa929](https://github.com/flaviareisv/zabbix-cli-ts/commit/57aa929481b70355a346921654c7c7e13b59f951))
+* adjust modules ([b1c03ae](https://github.com/flaviareisv/zabbix-cli-ts/commit/b1c03ae3cf9195c8c8e4031f031479e1bed0ccec))
+* adjust modules ([98580cc](https://github.com/flaviareisv/zabbix-cli-ts/commit/98580cc5108641014b585e535c2a53b3d77d1e6c))
+* refactory api and compilation ([03a53ff](https://github.com/flaviareisv/zabbix-cli-ts/commit/03a53ff3f244cc788a72267c8fe16cd7510d2691))
+
 ## [1.0.5-rc.7](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5-rc.6...v1.0.5-rc.7) (2024-01-23)
 
 
