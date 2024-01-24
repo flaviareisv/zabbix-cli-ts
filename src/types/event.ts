@@ -27,7 +27,7 @@ export type ZabbixEvent = {
   opdata: string
   urls: ZabbixEventUrls[]
   hosts?: Partial<ZabbixHost>[]
-  related_object?: ZabbixObjStringGeneric[]
+  relatedObject?: ZabbixObjStringGeneric[]
   alerts?: Partial<ZabbixAlert>[]
   acknowledges?: Partial<ZabbixEventAcknowledge>[]
   tags?: Partial<ZabbixTag>[]
