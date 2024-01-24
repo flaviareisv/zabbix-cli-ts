@@ -1,3 +1,10 @@
+# [1.1.0-rc.9](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.8...v1.1.0-rc.9) (2024-01-24)
+
+
+### Bug Fixes
+
+* add export types ([3d6ecf2](https://github.com/flaviareisv/zabbix-cli-ts/commit/3d6ecf2c04b129d7a64c3424a963d40b641e6dcc))
+
 # [1.1.0-rc.8](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.7...v1.1.0-rc.8) (2024-01-24)
 
 
