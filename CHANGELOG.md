@@ -1,3 +1,10 @@
+# [1.1.0-rc.6](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.5...v1.1.0-rc.6) (2024-01-24)
+
+
+### Bug Fixes
+
+* adjust return object with selects ([046965a](https://github.com/flaviareisv/zabbix-cli-ts/commit/046965a9609cceb89b3a9b214673481e3a3c68f5))
+
 # [1.1.0-rc.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.4...v1.1.0-rc.5) (2024-01-24)
 
 
