@@ -44,7 +44,9 @@ export default class Zabbix implements IZabbix {
       password: params.password
     })
     if (!response.ok) {
-      throw new Error(`Login HTTP error! status: ${response.status}`)
+      throw new Error(
+        `Login HTTP error! [${response.status}]: ${response.statusText}`
+      )
     }
     const res = (await response.json()) as ZabbixResponse<string>
     return res
@@ -59,22 +61,30 @@ export default class Zabbix implements IZabbix {
     params: ZabbixRequestParams
   ): Promise<ZabbixResponse<any>> {
     const response = await this.getDataAPI(apiMethod, params)
-    if (!response.ok) {
-      throw new Error(`${response.status}: ${response.statusText}`)
-    }
     const data: ZabbixResponse<any> =
       (await response.json()) as ZabbixResponse<any>
     return data
   }
 
   async getDataAPI(apiMethod: string, params: ZabbixRequestParams) {
-    if (!this.authToken) {
-      await this.getAuthToken()
+    try {
+      if (!this.authToken) {
+        await this.getAuthToken()
+      }
+      const response = await zabbixFetch(this.apiURL, apiMethod, params, {
+        ...this.options,
+        authToken: this.authToken
+      })
+      if (!response.ok) {
+        throw new Error(`[${response.status}]: ${response.statusText}`)
+      }
+      return response
+    } catch (err) {
+      if (err instanceof Response) {
+        throw new Error(`[${err.status}]: ${err.statusText}`)
+      }
+      throw err
     }
-    return zabbixFetch(this.apiURL, apiMethod, params, {
-      ...this.options,
-      authToken: this.authToken
-    })
   }
 
   private async getAuthToken(): Promise<void> {
