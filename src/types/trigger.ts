@@ -29,6 +29,15 @@ export type ZabbixTrigger = {
   correlation_tag: string
   manual_close: ZabbixTriggerManualClose
   uuid: string
+  groups?: Partial<ZabbixHostGroup>[]
+  hosts?: Partial<ZabbixHost>[]
+  items?: Partial<ZabbixItem>[]
+  functions?: Partial<ZabbixTriggerFunctions>[]
+  dependencies?: Partial<ZabbixTrigger>[]
+  discoveryRule?: Partial<ZabbixLLDRule>[]
+  lastEvent?: Partial<ZabbixEvent>[]
+  tags?: Partial<ZabbixTag>[]
+  triggerDiscovery?: ZabbixTriggerDiscovery[]
 }
 
 type ZabbixTriggerFlags = 0 | 4
@@ -113,7 +122,11 @@ type ZabbixTriggerGetSelectEvent = keyof ZabbixEvent
 
 type ZabbixTriggerGetSelectTags = keyof ZabbixTriggerGetTags
 
-type ZabbixTriggerGetSelectTriggerDiscovery = 'parent_triggerid'
+type ZabbixTriggerGetSelectTriggerDiscovery = keyof ZabbixTriggerDiscovery
+
+type ZabbixTriggerDiscovery = {
+  parent_triggerid: string
+}
 
 type ZabbixTriggerGetFilter = {
   [Property in keyof ZabbixTriggerFilter]: string | string[]
