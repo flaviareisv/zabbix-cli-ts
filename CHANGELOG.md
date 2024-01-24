@@ -1,3 +1,10 @@
+# [1.1.0-rc.7](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.6...v1.1.0-rc.7) (2024-01-24)
+
+
+### Bug Fixes
+
+* **event:** adjust object return ([b9ecd81](https://github.com/flaviareisv/zabbix-cli-ts/commit/b9ecd8135e1f4da3cec9489d7f6f606a7e375243))
+
 # [1.1.0-rc.6](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.5...v1.1.0-rc.6) (2024-01-24)
 
 
