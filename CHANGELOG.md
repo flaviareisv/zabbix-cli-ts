@@ -1,3 +1,10 @@
+# [1.1.0-rc.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.4...v1.1.0-rc.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* adjust error handler in fetch ([89cf822](https://github.com/flaviareisv/zabbix-cli-ts/commit/89cf822465ce0df3b0fadadd9b61f4d51199a415))
+
 # [1.1.0-rc.4](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.3...v1.1.0-rc.4) (2024-01-23)
 
 
