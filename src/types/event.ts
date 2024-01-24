@@ -97,7 +97,7 @@ type ZabbixEventGetSelectSuppressionData = keyof ZabbixSuppressionData
 
 export type ZabbixEventAcknowledgeAction = 1 | 2 | 4 | 8 | 16
 
-type ZabbixEventAcknowledge = {
+export type ZabbixEventAcknowledge = {
   acknowledgeid: string
   userid: string
   eventid: string

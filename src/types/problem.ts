@@ -78,7 +78,7 @@ type ZabbixProblemGetParamsTags = ZabbixTag & {
 
 type ZabbixProblemGetParamsTagsOperator = 0 | 1 | 2 | 3 | 4 | 5
 
-type ZabbixProblemGetSelectAcknowledges = {
+export type ZabbixProblemGetSelectAcknowledges = {
   acknowledgeid: string
   userid: string
   eventid: string
