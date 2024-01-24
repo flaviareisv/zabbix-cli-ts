@@ -1,6 +1,10 @@
 import { ZabbixEventAcknowledgeAction } from './event'
 import { ZabbixGetParamsCommon } from './get-common'
-import { ZabbixSeverity, ZabbixTag } from './zabbix-common'
+import {
+  ZabbixSeverity,
+  ZabbixSuppressionData,
+  ZabbixTag
+} from './zabbix-common'
 
 export type ZabbixProblem = {
   eventid: string
@@ -20,6 +24,9 @@ export type ZabbixProblem = {
   suppressed: ZabbixProblemSuppressed
   opdata: string
   urls: ZabbixProblemURL[]
+  acknowledges?: Partial<ZabbixProblemGetSelectAcknowledges>[]
+  tags?: Partial<ZabbixTag>[]
+  suppression_data?: Partial<ZabbixSuppressionData>[]
 }
 
 type ZabbixProblemSource = 0 | 3 | 4
@@ -87,7 +94,4 @@ type ZabbixProblemGetParamsAcknowledges =
 
 type ZabbixProblemGetParamsSelectTags = keyof ZabbixProblemGetParamsTags
 
-type ZabbixProblemGetParamsSuppressionData =
-  | 'maintenanceid'
-  | 'userid'
-  | 'suppress_until'
+type ZabbixProblemGetParamsSuppressionData = keyof ZabbixSuppressionData

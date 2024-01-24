@@ -8,3 +8,8 @@ export type ZabbixTag = {
 export type ZabbixObjStringGeneric = {
   [key: string]: string
 }
+
+export type ZabbixSuppressionData = {
+  maintenanceid: string
+  suppress_until: number
+}

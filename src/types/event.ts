@@ -1,7 +1,12 @@
 import { ZabbixAlert } from './alert'
 import { ZabbixGetParamsCommon } from './get-common'
 import { ZabbixHost } from './host'
-import { ZabbixSeverity, ZabbixTag } from './zabbix-common'
+import {
+  ZabbixObjStringGeneric,
+  ZabbixSeverity,
+  ZabbixSuppressionData,
+  ZabbixTag
+} from './zabbix-common'
 
 export type ZabbixEvent = {
   eventid: string
@@ -21,6 +26,12 @@ export type ZabbixEvent = {
   suppressed: ZabbixEventSuppressed
   opdata: string
   urls: ZabbixEventUrls[]
+  hosts?: Partial<ZabbixHost>[]
+  related_object?: ZabbixObjStringGeneric[]
+  alerts?: Partial<ZabbixAlert>[]
+  acknowledges?: Partial<ZabbixEventAcknowledge>[]
+  tags?: Partial<ZabbixTag>[]
+  suppression_data?: Partial<ZabbixSuppressionData>[]
 }
 
 type ZabbixEventSource = 0 | 1 | 2 | 3 | 4
@@ -82,7 +93,7 @@ type ZabbixEventGetSelectAcknowledges = keyof ZabbixEventAcknowledge
 
 type ZabbixEventGetSelectTags = keyof ZabbixEventGetTags
 
-type ZabbixEventGetSelectSuppressionData = 'maintenanceid' | 'suppress_until'
+type ZabbixEventGetSelectSuppressionData = keyof ZabbixSuppressionData
 
 export type ZabbixEventAcknowledgeAction = 1 | 2 | 4 | 8 | 16
 
