@@ -1,3 +1,10 @@
+# [1.1.0-rc.10](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.9...v1.1.0-rc.10) (2024-01-24)
+
+
+### Bug Fixes
+
+* **host:** add object ([4d1f802](https://github.com/flaviareisv/zabbix-cli-ts/commit/4d1f8027e53f91d93696856ed0ae90703484da42))
+
 # [1.1.0-rc.9](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.8...v1.1.0-rc.9) (2024-01-24)
 
 
