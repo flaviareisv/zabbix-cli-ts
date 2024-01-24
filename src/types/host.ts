@@ -38,6 +38,22 @@ export type ZabbixHost = {
   tls_subject: string
   tls_psk_identity: string
   tls_psk: string
+  discoveries?: Partial<ZabbixLLDRule>[]
+  discoveryRule?: Partial<ZabbixLLDRule>[]
+  graphs?: Partial<zabbixGraph>[]
+  hostDiscovery?: Partial<ZabbixHostDiscovery>[]
+  hostGroups?: Partial<ZabbixHostGroup>[]
+  httpTests?: Partial<ZabbixHTTPTest>[]
+  interfaces?: Partial<ZabbixHostInterface>[]
+  inventory?: Partial<ZabbixHostInventory>[]
+  items?: Partial<ZabbixItem>[]
+  macros?: Partial<ZabbixUserMacro>[]
+  parentTemplates?: Partial<ZabbixTemplate>[]
+  dashboards?: Partial<ZabbixTemplateDashboard>[]
+  tags?: Partial<ZabbixTag>[]
+  inheritedTags?: any
+  triggers?: Partial<ZabbixTrigger>[]
+  valueMaps?: Partial<ZabbixValueMap>[]
 }
 
 type ZabbixHostFlags = 0 | 4
@@ -127,13 +143,16 @@ type ZabbixHostGetTagsOperator = 0 | 1 | 2 | 3 | 4 | 5
 
 type ZabbixHostGetSelectDiscoveries = keyof ZabbixLLDRule
 
-type ZabbixHostGetSelectDiscovery =
-  | 'host'
-  | 'hostid'
-  | 'parent_hostid'
-  | 'parent_itemid'
-  | 'lastcheck'
-  | 'ts_delete'
+type ZabbixHostGetSelectDiscovery = keyof ZabbixHostDiscovery
+
+type ZabbixHostDiscovery = {
+  host: string
+  hostid: string
+  parent_hostid: string
+  parent_itemid: string
+  lastcheck: number
+  ts_delete: number
+}
 
 type ZabbixHostGetSelectHostGroup = keyof ZabbixHostGroup
 
