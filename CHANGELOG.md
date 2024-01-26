@@ -1,3 +1,10 @@
+# [1.1.0-rc.11](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.10...v1.1.0-rc.11) (2024-01-26)
+
+
+### Features
+
+* change ZabbixSeverity type ([c8eb8b5](https://github.com/flaviareisv/zabbix-cli-ts/commit/c8eb8b50a6e21221731adae72ac0299a7a9e6607))
+
 # [1.1.0-rc.10](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.9...v1.1.0-rc.10) (2024-01-24)
 
 
