@@ -1,4 +1,11 @@
-export type ZabbixSeverity = 0 | 1 | 2 | 3 | 4 | 5
+export enum ZabbixSeverity {
+  NOT_CLASSIFIED = 0,
+  INFORMATION = 1,
+  WARNING = 2,
+  AVERAGE = 3,
+  HIGH = 4,
+  DISASTER = 5
+}
 
 export type ZabbixTag = {
   tag: string

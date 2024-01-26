@@ -36,13 +36,8 @@ The parameters used by the constructor in the `ZabbixAPI` class are respectively
 - `username`: user defined in zabbix
 - `password`: password defined in zabbix
 - `options`:
-
-  ```json
-  {
-    authToken: '' // token to login (If completed, the class will not login automatically)
-    timeout: 30000 // milliseconds to abort the request (default: undefined)
-  }
-  ```
+  - `authToken`: token to login (If completed, the class will not login automatically)
+  - `timeout`: milliseconds to abort the request (default: undefined)
 
 ## Usage examples
 

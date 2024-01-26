@@ -31,6 +31,7 @@ export type ZabbixUser = {
 type ZabbixUserAutologin = 0 | 1
 
 export type ZabbixUserGetParams = {
+  output?: ZabbixUserOutput[] | 'extend'
   mediaids?: string | string[]
   mediatypeids?: string | string[]
   userids?: string | string[]
@@ -41,6 +42,8 @@ export type ZabbixUserGetParams = {
   selectUsrgrps?: ZabbixUserGetSelectUsrgrps[] | 'extend'
   selectRole?: ZabbixUserGetSelectRole[] | 'extend'
 } & ZabbixGetParamsCommon
+
+type ZabbixUserOutput = keyof ZabbixUser
 
 type ZabbixUserGetSelectMedias = keyof ZabbixUserMedia
 
