@@ -4,7 +4,6 @@ export type ZabbixGetParamsCommon = {
   excludeSearch?: boolean
   filter?: ZabbixGetParamsCommonObj
   limit?: number
-  output?: ZabbixGetParamsCommonObj[] | 'extend'
   preservekeys?: boolean
   search?: ZabbixGetParamsCommonObj
   searchByAny?: boolean

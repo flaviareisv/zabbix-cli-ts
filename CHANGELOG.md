@@ -1,3 +1,80 @@
+# [1.1.0-rc.11](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.10...v1.1.0-rc.11) (2024-01-26)
+
+
+### Features
+
+* change ZabbixSeverity type ([c8eb8b5](https://github.com/flaviareisv/zabbix-cli-ts/commit/c8eb8b50a6e21221731adae72ac0299a7a9e6607))
+
+# [1.1.0-rc.10](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.9...v1.1.0-rc.10) (2024-01-24)
+
+
+### Bug Fixes
+
+* **host:** add object ([4d1f802](https://github.com/flaviareisv/zabbix-cli-ts/commit/4d1f8027e53f91d93696856ed0ae90703484da42))
+
+# [1.1.0-rc.9](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.8...v1.1.0-rc.9) (2024-01-24)
+
+
+### Bug Fixes
+
+* add export types ([3d6ecf2](https://github.com/flaviareisv/zabbix-cli-ts/commit/3d6ecf2c04b129d7a64c3424a963d40b641e6dcc))
+
+# [1.1.0-rc.8](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.7...v1.1.0-rc.8) (2024-01-24)
+
+
+### Bug Fixes
+
+* **trigger:** adjust object return ([e91e9ff](https://github.com/flaviareisv/zabbix-cli-ts/commit/e91e9ff4c473eec27390a94b3e8ecf78273098a3))
+
+# [1.1.0-rc.7](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.6...v1.1.0-rc.7) (2024-01-24)
+
+
+### Bug Fixes
+
+* **event:** adjust object return ([b9ecd81](https://github.com/flaviareisv/zabbix-cli-ts/commit/b9ecd8135e1f4da3cec9489d7f6f606a7e375243))
+
+# [1.1.0-rc.6](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.5...v1.1.0-rc.6) (2024-01-24)
+
+
+### Bug Fixes
+
+* adjust return object with selects ([046965a](https://github.com/flaviareisv/zabbix-cli-ts/commit/046965a9609cceb89b3a9b214673481e3a3c68f5))
+
+# [1.1.0-rc.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.4...v1.1.0-rc.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* adjust error handler in fetch ([89cf822](https://github.com/flaviareisv/zabbix-cli-ts/commit/89cf822465ce0df3b0fadadd9b61f4d51199a415))
+
+# [1.1.0-rc.4](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.3...v1.1.0-rc.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* adjust type for host ([2929390](https://github.com/flaviareisv/zabbix-cli-ts/commit/2929390aa29f71d6782741cb734e98171434e2a3))
+
+# [1.1.0-rc.3](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2024-01-23)
+
+
+### Bug Fixes
+
+* remove unusabled ([3f86b21](https://github.com/flaviareisv/zabbix-cli-ts/commit/3f86b217efb6b7534933fa4ede86e2d924105e35))
+
+# [1.1.0-rc.2](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* adjust import types ([108ab36](https://github.com/flaviareisv/zabbix-cli-ts/commit/108ab364c142d748c9e2a4c7df505517ec838150))
+
+# [1.1.0-rc.1](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5...v1.1.0-rc.1) (2024-01-23)
+
+
+### Features
+
+* add request timeout ([ecfe334](https://github.com/flaviareisv/zabbix-cli-ts/commit/ecfe334c26dd6600a6c2ba7fe59aa067c6a6968c))
+
 ## [1.0.5](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.4...v1.0.5) (2024-01-23)
 
 

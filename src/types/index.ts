@@ -2,7 +2,8 @@ export { ZabbixAlert } from './alert'
 export {
   ZabbixEvent,
   ZabbixEventAcknowledgeAction,
-  ZabbixEventGetParams
+  ZabbixEventGetParams,
+  ZabbixEventAcknowledge
 } from './event'
 export { ZabbixGetParamsCommon } from './get-common'
 export { zabbixGraph } from './graph'
@@ -13,7 +14,11 @@ export { ZabbixHTTPTest } from './http-test'
 export { ZabbixItem } from './item'
 export { ZabbixLLDRule } from './lld-rule'
 export { ZabbixMediaType } from './media-type'
-export { ZabbixProblem, ZabbixProblemGetParams } from './problem'
+export {
+  ZabbixProblem,
+  ZabbixProblemGetParams,
+  ZabbixProblemGetSelectAcknowledges
+} from './problem'
 export { ZabbixRole } from './role'
 export { ZabbixTemplate } from './template'
 export { ZabbixTemplateDashboard } from './template-dashboard'

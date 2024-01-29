@@ -30,6 +30,15 @@ The available methods are:
 - event.get
 - trigger.get
 
+The parameters used by the constructor in the `ZabbixAPI` class are respectively:
+
+- `url`: zabbix api
+- `username`: user defined in zabbix
+- `password`: password defined in zabbix
+- `options`:
+  - `authToken`: token to login (If completed, the class will not login automatically)
+  - `timeout`: milliseconds to abort the request (default: undefined)
+
 ## Usage examples
 
 The example below calls the `event.get` method:
@@ -68,4 +77,14 @@ async function getResquest() {
 }
 
 getRequest()
+```
+
+Using request timeout:
+
+```js
+import ZabbixAPI from 'zabbix-cli-ts'
+
+const zabbix = new ZabbixAPI('[ZBX_URL]', '[ZBX_USER]', '[ZBX_PASS]', {
+  timeout: 30000
+})
 ```

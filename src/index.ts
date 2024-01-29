@@ -33,6 +33,9 @@ export {
   ZabbixObjStringGeneric,
   ZabbixSeverity,
   ZabbixTag,
-  ZabbixResponse
+  ZabbixResponse,
+  ZabbixEventAcknowledge,
+  ZabbixProblemGetSelectAcknowledges
 } from './types'
 export { IZabbix, IZabbixAPI } from './interfaces'
+export { ZabbixRequestOptions } from './zabbix-fetch'
