@@ -1,3 +1,24 @@
+# [1.1.0](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.0.5...v1.1.0) (2024-01-29)
+
+
+### Bug Fixes
+
+* add export types ([3d6ecf2](https://github.com/flaviareisv/zabbix-cli-ts/commit/3d6ecf2c04b129d7a64c3424a963d40b641e6dcc))
+* adjust error handler in fetch ([89cf822](https://github.com/flaviareisv/zabbix-cli-ts/commit/89cf822465ce0df3b0fadadd9b61f4d51199a415))
+* adjust import types ([108ab36](https://github.com/flaviareisv/zabbix-cli-ts/commit/108ab364c142d748c9e2a4c7df505517ec838150))
+* adjust return object with selects ([046965a](https://github.com/flaviareisv/zabbix-cli-ts/commit/046965a9609cceb89b3a9b214673481e3a3c68f5))
+* adjust type for host ([2929390](https://github.com/flaviareisv/zabbix-cli-ts/commit/2929390aa29f71d6782741cb734e98171434e2a3))
+* **event:** adjust object return ([b9ecd81](https://github.com/flaviareisv/zabbix-cli-ts/commit/b9ecd8135e1f4da3cec9489d7f6f606a7e375243))
+* **host:** add object ([4d1f802](https://github.com/flaviareisv/zabbix-cli-ts/commit/4d1f8027e53f91d93696856ed0ae90703484da42))
+* remove unusabled ([3f86b21](https://github.com/flaviareisv/zabbix-cli-ts/commit/3f86b217efb6b7534933fa4ede86e2d924105e35))
+* **trigger:** adjust object return ([e91e9ff](https://github.com/flaviareisv/zabbix-cli-ts/commit/e91e9ff4c473eec27390a94b3e8ecf78273098a3))
+
+
+### Features
+
+* add request timeout ([ecfe334](https://github.com/flaviareisv/zabbix-cli-ts/commit/ecfe334c26dd6600a6c2ba7fe59aa067c6a6968c))
+* change ZabbixSeverity type ([c8eb8b5](https://github.com/flaviareisv/zabbix-cli-ts/commit/c8eb8b50a6e21221731adae72ac0299a7a9e6607))
+
 # [1.1.0-rc.11](https://github.com/flaviareisv/zabbix-cli-ts/compare/v1.1.0-rc.10...v1.1.0-rc.11) (2024-01-26)
 
 
