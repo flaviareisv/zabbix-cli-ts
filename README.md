@@ -4,6 +4,10 @@
   <a href="https://www.npmjs.com/package/zabbix-cli-ts">
     <img alt="npm latest version" src="https://img.shields.io/npm/v/zabbix-cli-ts/latest.svg">
   </a>
+  <a href="https://www.npmjs.com/package/zabbix-cli-ts">
+    <img alt="total downloads" src="https://img.shields.io/npm/dt/zabbix-cli-ts
+    ">
+  </a>
 </p>
 
 This is a typescript lib to make calls to the zabbix api.
